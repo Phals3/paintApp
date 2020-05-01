@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale =1.0"/>
+        <link rel="stylesheet" href="{% static 'paint/css/style.css' %}"/>
+        <title>Canvas</title>
+    </head>
+    <body>
+
+        <canvas id="canvas"></canvas>
+
+    <div id="buttons">
+        <input type="button" id="clear" value="Clear">
+        <input type="button" class="bcolor" id="black">
+        <input type="button" class="bcolor" id="yellow">
+        <input type="button" class="bcolor" id="red">
+        <input type="button" class="bcolor" id="green">
+        <input type="button" class="bcolor" id="blue">
+    </div>
+
+        <script src="{% static 'paint/js/canvas.js'%}"></script>
+    </body>
+</html>
