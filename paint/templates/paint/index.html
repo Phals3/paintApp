@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale =1.0"/>
-        {% load static %}
-        <link rel="stylesheet" type="text/css" href="{% static 'paint/css/style.css' %}" />
-        <title>paintApp</title>
-    </head>
-    <body>
-        <canvas id="canvas"></canvas>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale =1.0"/>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'paint/css/style.css' %}"/>
+    <link rel="shortcut icon" href="{% static 'paint/images/rubber.png' %}">
+    <title>paintApp</title>
+</head>
 
-    <div id="buttons">
-        <input type="button"  id="clear" value="Clear">
-        <input type="button" class="b_color" id="black">
-        <input type="button" class="b_color" id="yellow">
-        <input type="button" class="b_color" id="red">
-        <input type="button" class="b_color" id="green">
-        <input type="button" class="b_color" id="blue">
-        <input type="image"  class="b_color" id="rubber" src ="{% static 'paint/images/rubber.png' %}">
-        <input type="button" id="draw" value="draw">
+<body>
+    <canvas id="canvas"></canvas>
+
+    <div id="toolbox">
+        <input type="button" class="c_buttons" id="black">
+        <input type="button" class="c_buttons" id="yellow">
+        <input type="button" class="c_buttons" id="red">
+        <input type="button" class="c_buttons" id="green">
+        <input type="button" class="c_buttons" id="blue">
+        <input type="image" class="c_buttons" id="white" src="{% static 'paint/images/rubber.png' %}" alt="Rubber">
+        <input type="button" class="scale_brush" id="plus" value="+">
+        <input type="button" class="scale_brush" id="minus" value="-">
+        <label id="brush_size"></label>
     </div>
-
-        <script src="{% static 'paint/js/canvas.js'%}"></script>
-    </body>
+    <div id="functional_buttons">
+        <input type="button" class="f_buttons" id="clear" value="Clear">
+        <input type="button" class="f_buttons" id="load" value="Load IMG">
+    </div>
+<script src="{% static 'paint/js/canvas.js' %}"></script>
+</body>
 </html>
