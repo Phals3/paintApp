@@ -8,16 +8,17 @@
         <title>paintApp</title>
     </head>
     <body>
-
         <canvas id="canvas"></canvas>
 
     <div id="buttons">
-        <input type="button" id="clear" value="Clear">
-        <input type="button" class="bcolor" id="black">
-        <input type="button" class="bcolor" id="yellow">
-        <input type="button" class="bcolor" id="red">
-        <input type="button" class="bcolor" id="green">
-        <input type="button" class="bcolor" id="blue">
+        <input type="button"  id="clear" value="Clear">
+        <input type="button" class="b_color" id="black">
+        <input type="button" class="b_color" id="yellow">
+        <input type="button" class="b_color" id="red">
+        <input type="button" class="b_color" id="green">
+        <input type="button" class="b_color" id="blue">
+        <input type="image"  class="b_color" id="rubber" src ="{% static 'paint/images/rubber.png' %}">
+        <input type="button" id="draw" value="draw">
     </div>
 
         <script src="{% static 'paint/js/canvas.js'%}"></script>

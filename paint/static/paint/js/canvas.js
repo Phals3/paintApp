@@ -54,5 +54,8 @@ window.addEventListener('load', () => {
     document.getElementById('blue').addEventListener('click', () => {
         ctx.strokeStyle = 'blue';
     });
+    document.getElementById('rubber').addEventListener('click', () => {
+        ctx.strokeStyle = 'white';
+    });
 
 });
