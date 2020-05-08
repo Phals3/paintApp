@@ -3,30 +3,46 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale =1.0"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Princess+Sofia&display=swap" rel="stylesheet">
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'paint/css/style.css' %}"/>
-    <link rel="shortcut icon" href="{% static 'paint/images/rubber.png' %}">
-    <title>paintApp</title>
+    <title>PaintApp</title>
 </head>
 
 <body>
-    <canvas id="canvas"></canvas>
+    <div id = 'header'>
+            <div>Pain</div>
+            <div id="tap">tAp</div>
+            <div>p</div>
+    </div>
+   <canvas id="canvas"></canvas>
 
     <div id="toolbox">
-        <input type="button" class="c_buttons" id="black">
-        <input type="button" class="c_buttons" id="yellow">
-        <input type="button" class="c_buttons" id="red">
-        <input type="button" class="c_buttons" id="green">
-        <input type="button" class="c_buttons" id="blue">
-        <input type="image" class="c_buttons" id="white" src="{% static 'paint/images/rubber.png' %}" alt="Rubber">
-        <input type="button" class="scale_brush" id="plus" value="+">
-        <input type="button" class="scale_brush" id="minus" value="-">
-        <label id="brush_size"></label>
+        <div id="color-buttons">
+            <button class="c-buttons" id="black"></button>
+            <button class="c-buttons" id="yellow"></button>
+            <button class="c-buttons" id="red"></button>
+            <button class="c-buttons" id="green"></button>
+            <button class="c-buttons" id="blue"></button>
+            <button class="c-buttons" id="rubber"><i class="fas fa-eraser"></i></button>
+
+        </div>
+        <div id="functional-buttons">
+            <div id="cl">
+                <button class="f-buttons" id="clear">Clear</button>
+                <button class="f-buttons" id="load">Load</button>
+            </div>
+            <div id="brush">
+                <button id="minus" class="f-buttons">-</button>
+                <div id="brush-size">10</div>
+                <button id="plus" class="f-buttons">+</button>
+            </div>
+
+        </div>
     </div>
-    <div id="functional_buttons">
-        <input type="button" class="f_buttons" id="clear" value="Clear">
-        <input type="button" class="f_buttons" id="load" value="Load IMG">
-    </div>
+
 <script src="{% static 'paint/js/canvas.js' %}"></script>
 </body>
 </html>

@@ -1,69 +1,104 @@
-* {
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-image: linear-gradient(120deg, #335d6d, #71a8bf);
+    cursor: url("../images/paint_brush.svg"), auto;
+    font-family: 'Princess Sofia', cursive;
+}
+
+#header {
+    min-height: 5%;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(245, 229, 123);
+}
+
+#tap {
+    color: darkorange;
 }
 
 #canvas {
-    border: 2px solid black;
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: auto;
-    margin-right: auto;
+    border: 1px solid #777777;
+    margin: auto;
     display: block;
+    background-color: white;
 }
 
-#brush_size {
-    text-align: center;
-}
-
-.scale_brush {
-    width: 25px;
-    height: 25px;
-    text-align: center;
-    border: 2px solid black;
-    border-radius: 50%;
-}
-
-#functional_buttons {
-    text-align: center;
-}
 
 #toolbox {
-    text-align: center;
+    bottom: 0;
+    height: 15%;
 }
 
-.c_buttons {
+#color-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.c-buttons {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 3px solid black;
+    border: 1px solid #777777;
+    outline: none;
+    padding: 0;
+    margin: 5px;
 }
 
-.color_buttons {
-    border: 3px solid pink;
+.c-buttons:hover {
+    opacity: 0.3;
 }
 
-#black {
-    background-color: black;
+.fa-eraser {
+    pointer-events: none;
+    color: #051d21;
+    font-size: 20px;
 }
 
-#black :active {
-    color: gray;
+#functional-buttons {
+    display: flex;
+    justify-content: center;
 }
 
-#yellow {
-    background-color: yellow;
+.f-buttons {
+    font-family: 'Princess Sofia', cursive;
+    background-color: #0c2a38;
+    color: #ffffff;
+    font-size: 1.5rem;
+    border: 1px solid #777777;
+    outline: none;
+    border-radius: 10%;
+    text-align: center;
+    font-weight: bold;
 }
 
-#red {
-    background-color: red;
+.f-buttons:hover {
+    color: #0c2a38;
+    background-color: #ffffff;
 }
 
-#green {
-    background-color: green;
+#cl, #brush {
+    display: inline-flex;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
-#blue {
-    background-color: blue;
+#clear, #load {
+    margin-left: 5%;
+}
+
+#minus, #plus, #brush-size {
+    margin: auto;
+    width: 2rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.fa-minus-circle, .fa-plus-circle {
+    pointer-events: none;
 }
