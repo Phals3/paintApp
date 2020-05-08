@@ -101,11 +101,12 @@ window.addEventListener('load', () => {
         else if (x.id === 'minus') scaleBrush(-1);
         else if (x.id === 'clear') ctx.clearRect(0, 0, canvas.width, canvas.height);
         else if (x.id === 'load') {
-            let img = new Image(canvas.width, canvas.height);
+            let img = new Image(300, 300);
             img.onload = () => {
-                ctx.drawImage(img, 0, 0);
+                ctx.drawImage(img, (canvas.width - img.width) / 2,
+                    (canvas.height - img.height) / 2);
             }
-            img.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Stick-Figure.svg/725px-Stick-Figure.svg.png";
+            img.src = "static/paint/images/scoff.png";
         }
     });
 
