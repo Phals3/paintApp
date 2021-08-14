@@ -25,7 +25,7 @@ window.addEventListener('load', () => {
     //variables
     let painting = false;
     let brushSize = 10;
-    let brushPos = {x: 0, y: 0};
+    let brushPos = { x: 0, y: 0 };
 
 
     function getBrushPos(canvasCtx, e) {
@@ -91,11 +91,7 @@ window.addEventListener('load', () => {
 
     let toPlay = new Audio('static/paint/audio/welcome.mp3');
     document.addEventListener('click', (e) => {
-        let x = e.target;
-        if (x.id === 'tap') {
-            if (toPlay.paused) toPlay.play();
-            else if (toPlay.currentTime > 0) toPlay.pause();
-        }
+        let x = e.target
         if (x.className === 'c-buttons') setColor(x.id);
         else if (x.id === 'plus') scaleBrush(1);
         else if (x.id === 'minus') scaleBrush(-1);
